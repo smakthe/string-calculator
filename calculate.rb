@@ -25,7 +25,7 @@ module Calculator
             negetive_values = numbers.select{|n| n < 0 }
             # Returning all the negetive numbers in case present in input
             if negetive_values.count > 0
-                return "negatives not allowed: ",negetive_values.join(",")
+                return "negatives not allowed: "+negetive_values.join(",")
             # Returning the sum
             else
                 return numbers.reduce(:+)
@@ -36,5 +36,4 @@ module Calculator
     end
 
 end
-puts Calculator.add("//[%][&][***]
-1%2&3***4")
+print Calculator.add("1,-2,3,-4")
