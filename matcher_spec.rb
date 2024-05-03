@@ -10,22 +10,18 @@ RSpec.describe Matcher do
         expect("1").to match REGEXP
     end
     it "matches with new line present" do
-        expect("1,
-               2,3").to match REGEXP
+        expect("1,\n2,3").to match REGEXP
     end
     it "does not match when numbers are absent after comma" do
         expect("1,").not_to match REGEXP
     end
     it "matches with custom delimiter" do
-        expect("//[;]
-               1;2")
+        expect("//[;]\n1;2").to match REGEXP
     end
     it "matches with more than one custom delimiters are present" do
-        expect("//[;][&]
-               1;2&3")
+        expect("//[;][&]\n1;2&3").to match REGEXP
     end
     it "matches with multi-character custom delimiters" do
-        expect("//[%][***]
-               1%2***3")
+        expect("//[%][***]\n1%2***3").to match REGEXP
     end
 end
