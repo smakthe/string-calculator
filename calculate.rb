@@ -36,4 +36,4 @@ module Calculator
     end
 
 end
-print Calculator.add("1,-2,3,-4")
+print Calculator.add("")
