@@ -1,0 +1,3 @@
+require './matcher'
+
+include Matcher
