@@ -1,2 +1,3 @@
 module Matcher
+    REGEXP = //
 end
