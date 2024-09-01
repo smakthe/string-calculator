@@ -3,6 +3,12 @@ require './matcher'
 include Matcher
 
 RSpec.describe Matcher do
+    it "does not match when when numbers are absent" do
+        expect("hello").not_to match REGEXP
+    end
+    it "does not match when when alphabets are present" do
+        expect("1,a").not_to match REGEXP
+    end
     it "matches with comma-seperated inputs" do
         expect("1,2").to match REGEXP
     end
