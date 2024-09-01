@@ -1,0 +1,3 @@
+module Matcher
+    REGEXP = //
+end
