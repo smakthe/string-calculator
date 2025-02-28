@@ -10,4 +10,9 @@ RSpec.describe Calculator do
   it "returns the sum for two input numbers seperated by comma" do
     expect(Calculator.add("1,2")).to eq(3)
   end
+  it "returns the sum with a newline character persent" do
+    expect(Calculator.add("1,
+
+                      2,3")).to eq(6)
+  end
 end
