@@ -15,4 +15,7 @@ RSpec.describe Calculator do
 
                       2,3")).to eq(6)
   end
+  it "returns the sum with any amount of numbers present" do
+    expect(Calculator.add("1,2,3,4,5")).to eq(15)
+  end
 end
