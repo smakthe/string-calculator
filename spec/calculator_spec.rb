@@ -27,4 +27,7 @@ RSpec.describe Calculator do
   it "returns the sum for the input numbers seperated by multi-character custom delimiters" do
       expect(Calculator.add("//[%][&][***]\n1%2&3***4")).to eq(10)
   end
+  it "throws an exception if a negative number is passed in the input" do
+    expect(Calculator.add("1,-2,3")).to eq("negatives not allowed: "+"-2")
+  end
 end
