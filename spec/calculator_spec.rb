@@ -28,6 +28,9 @@ RSpec.describe Calculator do
       expect(Calculator.add("//[%][&][***]\n1%2&3***4")).to eq(10)
   end
   it "throws an exception if a negative number is passed in the input" do
-    expect(Calculator.add("1,-2,3")).to eq("negatives not allowed: "+"-2")
+    expect(Calculator.add("1,-2,3")).to eq("negative numbers not allowed: "+"-2")
+  end
+  it "throws an exception if multiple negative numbers are passed in the input" do
+    expect(Calculator.add("1,-2,3,-4")).to eq("negative numbers not allowed: "+"-2,-4")
   end
 end
