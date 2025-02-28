@@ -21,4 +21,7 @@ RSpec.describe Calculator do
   it "returns the sum for the input numbers seperated by a custom delimiter" do
     expect(Calculator.add("//[;]\n1;2;3")).to eq(6)
   end
+  it "returns the sum for the input numbers seperated by more than one custom delimiters" do
+    expect(Calculator.add("//[;][&]\n1;2&3")).to eq(6)
+  end
 end
