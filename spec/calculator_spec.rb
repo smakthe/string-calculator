@@ -33,4 +33,7 @@ RSpec.describe Calculator do
   it "throws an exception if multiple negative numbers are passed in the input" do
     expect(Calculator.add("1,-2,3,-4")).to eq("negative numbers not allowed: "+"-2,-4")
   end
+  it "ignores any number from input which is greater than 1000" do
+    expect(Calculator.add("2,1001")).to eq(2)
+  end
 end
